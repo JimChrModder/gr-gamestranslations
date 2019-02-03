@@ -17,4 +17,4 @@
 
 
 <h2>Βίντεο εγκατάστασης και χρήσης</h2>
-Σύντομα...
+https://www.youtube.com/watch?v=GBAtieWC5wA&t
