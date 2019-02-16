@@ -1,7 +1,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 ORANGE='\033[0;33m'
-CurrentVersion="1.0"
+CurrentVersion="2.0"
 
 
 wget -q --spider http://duckduckgo.com
@@ -10,7 +10,7 @@ if [ $? -eq 0 ]; then
 
 MAINPOINT(){
 	echo -e "${NC} Please Select your option:"
-GameList="TWRII TWA Software_Inc Foundation check_notifier_update gr-gamestranslations.eu"
+GameList="TWRII TWA Software_Inc Foundation CodeCombat Factorio RimWorld while_True_Learn Yorg_io 0_A_D check_notifier_update gr-gamestranslations.eu"
 echo -e "${NC}"
 
 select selected_option in $GameList; do
@@ -62,6 +62,78 @@ echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
 	xdg-open http://www.gr-gamestranslations.eu/index.php/category/fdt/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "CodeCombat" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/CodeCombat_version.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/cc/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "Factorio" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Factorio.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/fctr/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "RimWorld" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/RimWorld_version.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/rw/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "while_True_Learn" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/whileTrueLearn_version.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/wtl/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "Yorg_io" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Yiorg_io_version.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/yorg/ &>/dev/null
+else
+MAINPOINT
+fi
+echo -e "${NC}"
+
+elif [[ "$selected_option" = "0_A_D" ]]; then
+echo -e "${RED}"
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/0AD_version.md
+echo -e "${NC}Do you want to download it?(Y/N)"
+read
+if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
+	xdg-open http://www.gr-gamestranslations.eu/index.php/category/0ad/ &>/dev/null
 else
 MAINPOINT
 fi
