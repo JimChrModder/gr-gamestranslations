@@ -1,11 +1,11 @@
-TWRII="Latest Version: 4.01 (16/11/2018)"
-SI="Latest Version: 17.50 (2/2/2019)"
-TWA="Latest Version: 4.0 (17/6/2018)"
-Fndt="Latest Version: Alpha 1.0.1.0201 (1/2/2019)"
-CodeC="Latest Version: 1.0 (16/2/2019)"
-Fctr="Latest Version: 1.0 (16/2/2019)"
-RW="Latest Version: 1.0 (16/2/2019)"
-wTl="Latest Version: 1.0 (16/2/2019)"
-Yorg="Latest Version: 1.0 (16/2/2019)"
-0AD="Latest Version: 1.0 (16/2/2019)"
+TWRII"Latest Version: 4.01 (16/11/2018)
+SI=Latest Version: 17.50 (2/2/2019)
+TWA=Latest Version: 4.0 (17/6/2018)
+Fndt=Latest Version: Alpha 1.0.1.0201 (1/2/2019)
+CodeC=Latest Version: 1.0 (16/2/2019)
+Fctr=Latest Version: 1.0 (16/2/2019)
+RW=Latest Version: 1.0 (16/2/2019)
+wTl=Latest Version: 1.0 (16/2/2019)
+Yorg=Latest Version: 1.0 (16/2/2019)
+0AD=Latest Version: 1.0 (16/2/2019)
 GGTV=Latest Version: 2.2
