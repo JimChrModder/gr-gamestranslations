@@ -1,7 +1,7 @@
 RED='\033[0;31m'
 NC='\033[0m'
 ORANGE='\033[0;33m'
-CurrentVersion="2.0"
+CurrentVersion="2.2"
 
 
 wget -q --spider http://duckduckgo.com
@@ -19,7 +19,7 @@ echo
 
 if [[ "$selected_option" = "TWRII" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TWRII_version.md
+GameCode="TWRII"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS="=" read MyVAR MyVer; do if [ $MyVAR = "$GameCode" ] ; then echo $MyVer; fi ; done
 echo
 
 echo -e "${NC}Do you want to download it?(Y/N)"
@@ -33,7 +33,8 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "TWA" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TWA_version.md
+GameCode="TWA"
+curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -45,7 +46,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "Software_Inc" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/SoftwareInc_version.md
+GameCode="SI"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -57,7 +58,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "Foundation" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Foundation_version.md
+GameCode="Fndt"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -69,7 +70,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "CodeCombat" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/CodeCombat_version.md
+GameCode="CodeC"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -81,7 +82,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "Factorio" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Factorio.md
+GameCode="Fctr"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -93,7 +94,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "RimWorld" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/RimWorld_version.md
+GameCode="RW"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -105,7 +106,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "while_True_Learn" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/whileTrueLearn_version.md
+GameCode="wTl"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -117,7 +118,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "Yorg_io" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Yiorg_io_version.md
+GameCode="Yorg"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -129,7 +130,7 @@ echo -e "${NC}"
 
 elif [[ "$selected_option" = "0_A_D" ]]; then
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/0AD_version.md
+GameCode="0AD"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}Do you want to download it?(Y/N)"
 read
 if [[ "$REPLY" = "Y" || "$REPLY" = "y" ]]; then
@@ -146,7 +147,7 @@ echo -e "${NC}"
 elif [[ "$selected_option" = "check_notifier_update" ]]; then
 echo -e "Current Version: $CurrentVersion"
 echo -e "${RED}"
-curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/ggt_online_version.md
+GameCode="GGTV"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
 echo -e "${NC}"
 
 else
