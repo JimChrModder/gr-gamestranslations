@@ -1,5 +1,3 @@
-GGT-Update_Notifier Latest Version ="Latest Version: 2.2"
-
 1) Total War Rome II ="Latest Version: 4.01 (16/11/2018)"
 2) Software Inc.     ="Latest Version: 17.50 (2/2/2019)"
 3) Total War Attila  ="Latest Version: 4.0 (17/6/2018)"
