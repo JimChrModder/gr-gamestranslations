@@ -1,0 +1,12 @@
+GGT-Update_Notifier Latest Version ="Latest Version: 2.2"
+
+1) Total War Rome II ="Latest Version: 4.01 (16/11/2018)"
+2) Software Inc.     ="Latest Version: 17.50 (2/2/2019)"
+3) Total War Attila  ="Latest Version: 4.0 (17/6/2018)"
+4) Foundation        ="Latest Version: 12.1 (1/2/2019)"
+5) CodeCombat        ="Latest Version: 1.0 (16/2/2019)"
+6) Factorio          ="Latest Version: 1.0 (16/2/2019)"
+7) RimWorld          ="Latest Version: 1.0 (16/2/2019)"
+8) while True: Learn ="Latest Version: 1.0 (16/2/2019)"
+9) Yorg.io           ="Latest Version: 1.0 (16/2/2019)"
+10) 0 A.D            ="Latest Version: 1.0 (16/2/2019)"
