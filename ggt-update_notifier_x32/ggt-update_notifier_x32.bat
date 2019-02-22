@@ -4,10 +4,9 @@ color 0a
 
 :MAINPOINT
 echo checking internet connection...
-Ping www.google.nl -n 1 -w 1000
+Ping www.google.nl -n 1 -w 1000 | find "Reply" > nul
 cls
 if errorlevel 1  ( echo There is no internet connection! Please check your internet.) else ( goto ggt_update_notifier)
-set CurrentVersion="1.0"
 pause
 goto MAINPOINT
 
@@ -16,248 +15,80 @@ goto MAINPOINT
 
 echo ===============--- Menu ---===============
 echo(
-echo  1) TWRII
+echo  1) Show Translations Versions
 echo(
-echo  2) TWA
+echo  2) Check for Update Notifier Latest Version
 echo(
-echo  3) Software Inc
+echo  3) visit gr-gamestranslations.eu
 echo(
-echo  4) Foundation
-echo(
-echo  5) CodeCombat
-echo(
-echo  6) Factorio
-echo(
-echo  7) RimWorld
-echo(
-echo  8) while True: Learn
-echo(
-echo  9) Yorg.io
-echo(
-echo  10) 0 A.D
-echo(
-echo  11) check notifier update
-echo(
-echo  12) gr-gamestranslations.eu
 echo =========================================
 echo(
 set /p ans="Please Select your option:"
 echo(
 echo(
 
-if %ans%==1 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected TWRII
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TWRII_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/twrii/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
+if %ans%==1 ( goto TR_VER)
+if %ans%==2 ( goto UN_LV )
+if %ans%==3 ( start "" http://www.gr-gamestranslations.eu/ )
 goto MAINPOINT
-)
-
-if %ans%==2 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected TWA
-echo(
+:::::::::::::::::::::::::::TranslationVersions::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::--------------
+:TR_VER
 cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TWA_version.md
+curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersionsWin.md
+cd ..
+cd ..
+echo 11) "BACK"
 echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/twa/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==3 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected Software Inc
 echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/SoftwareInc_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/s-i/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==4 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected Foundation
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Foundation_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/fdt/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==5 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected CodeCombat
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/CodeCombat_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/cc/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==6 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected Factorio
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Factorio.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/fctr/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==7 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected RimWorld
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/RimWorld_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/rw/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==8 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected while True: Learn
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/whileTrueLearn_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/wtl/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==9 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected Yorg.io
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/Yiorg_io_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/yorg/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-)
-
-if %ans%==10 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo You selected 0 A.D
-echo(
-cd curl-7.63.0-win64-mingw\bin\
-curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/0AD_version.md
-echo(
-echo Do you want to download it?
-choice /c YN 
-if !errorlevel!==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/0ad/ )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
+echo Do you want to download any translation?
+choice /c YN
+if !errorlevel!==1 ( goto DOWNLOAD ) else (
 goto MAINPOINT
 )
 
 
-if %ans%==11 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo Checking for update...
+
+:DOWNLOAD
+set /p selected_option="Please select your option:"
 echo(
+echo(
+if %selected_option% LSS 1 ( echo "Invalid Option! Please try again"
+goto DOWNLOAD
+)
+if %selected_option% GTR 11 ( echo "Invalid Option! Please try again"
+goto DOWNLOAD
+)
+if %selected_option%==1 ( start "" http://www.gr-gamestranslations.eu/index.php/category/twrii/ )
+if %selected_option%==2 ( start "" http://www.gr-gamestranslations.eu/index.php/category/s-i/ ) 
+if %selected_option%==3 ( start "" http://www.gr-gamestranslations.eu/index.php/category/twa/ )
+if %selected_option%==4 ( start "" http://www.gr-gamestranslations.eu/index.php/category/fdt/ )
+if %selected_option%==5 ( start "" http://www.gr-gamestranslations.eu/index.php/category/cc/ )
+if %selected_option%==6 ( start "" http://www.gr-gamestranslations.eu/index.php/category/fctr/ )
+if %selected_option%==7 ( start "" http://www.gr-gamestranslations.eu/index.php/category/rw/ )
+if %selected_option%==8 ( start "" http://www.gr-gamestranslations.eu/index.php/category/wtl/ )
+if %selected_option%==9 ( start "" http://www.gr-gamestranslations.eu/index.php/category/yorg/ )
+if %selected_option%==10 ( start "" http://www.gr-gamestranslations.eu/index.php/category/0ad/ )
+if %selected_option%==11 ( goto MAINPOINT ) 
+pause
+cls
+goto TR_VER
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_________
+
+
+
+:::::::::::::::::::::::::::::::::::UN_LV:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::---------
+:UN_LV
 echo Current Version: 2.0
 echo(
 cd curl-7.63.0-win64-mingw\bin\
 curl.exe https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/ggt_online_version.md
+cd ..
+cd ..
 echo(
-echo Do you want to update it?
-choice /c YN 
-if !errorlevel!==1 ( start "" https://github.com/JimChrModder/gr-gamestranslations )
-cd ..
-cd ..
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
+echo Do you want to download the Latest Version?
+choice /c YN
+if !errorlevel!==1 ( start "" https://github.com/JimChrModder/gr-gamestranslations/archive/master.zip ) else (
+pause )
 goto MAINPOINT
-)
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::_________
 
-if %ans%==12 (
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-echo Visiting gr-gamestranslations.eu ...
-start "" http://www.gr-gamestranslations.eu
-echo(
-echo =+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+
-pause
-cls
-goto MAINPOINT
-) else ( echo Invalid option! Please try again.
-pause
-cls
-goto MAINPOINT
-)
-)
