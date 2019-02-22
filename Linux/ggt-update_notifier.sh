@@ -147,7 +147,7 @@ echo -e "${NC}"
 elif [[ "$selected_option" = "check_notifier_update" ]]; then
 echo -e "Current Version: $CurrentVersion"
 echo -e "${RED}"
-GameCode="GGTV"; curl -s -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/TranslationVersions.md | while IFS='=' read MyVAR MyVer; do if [ $MyVAR = $GameCode ] ; then echo $MyVer; fi ; done
+curl -L https://raw.githubusercontent.com/JimChrModder/gr-gamestranslations/master/ggt_online_version.md
 echo -e "${NC}"
 
 else
