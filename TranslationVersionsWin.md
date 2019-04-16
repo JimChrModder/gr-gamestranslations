@@ -1,7 +1,7 @@
 1) Total War Rome II ="Latest Version: 4.01 (16/11/2018)"
 2) Software Inc.     ="Latest Version: 17.50 (2/2/2019)"
 3) Total War Attila  ="Latest Version: 4.0 (17/6/2018)"
-4) Foundation        ="Latest Version: 12.5 (4/9/2019)"
+4) Foundation        ="Latest Version: 12.7 (16/9/2019)"
 5) CodeCombat        ="Latest Version: 1.0 (16/2/2019)"
 6) Factorio          ="Latest Version: 0.16.51 (16/2/2019)"
 7) RimWorld          ="Latest Version: 1.0.2150 (16/2/2019)"
