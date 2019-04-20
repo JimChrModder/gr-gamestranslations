@@ -8,4 +8,4 @@
 8) while True: Learn ="Latest Version: 1.0.61 (16/2/2019)"
 9) Yorg.io           ="Latest Version: 2.5.2 (16/2/2019)"
 10) 0 A.D            ="Latest Version: 23.08.18 (21935) (25/2/2019)"
-11) Werewolf         ="Latest Version: Πάντα Ανανεωμένο"
+11) Werewolf Online  ="Latest Version: Πάντα Ανανεωμένο"
